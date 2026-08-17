@@ -11,7 +11,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { pageSeoHead } from "../lib/site-seo";
 
 function NotFoundComponent() {
   return (
@@ -74,9 +73,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => {
-    const seo = pageSeoHead("/");
-    return {
+  head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -90,10 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Krka Tours" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#367c2b" },
-      ...seo.meta,
     ],
     links: [
-      ...seo.links,
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "icon", href: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
@@ -118,8 +113,7 @@ gtag('js', new Date());
 gtag('config', 'G-7JN7J9KVKZ');`,
       },
     ],
-  };
-  },
+  }),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
