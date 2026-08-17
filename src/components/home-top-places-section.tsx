@@ -40,7 +40,7 @@ const placeTabs: PlaceTab[] = [
         With a private driver-guide you set the pace: linger at the waterfalls, take a scenic boat
         ride, or add Visovac viewpoints.{" "}
         <strong>No crowded coaches, no fixed timetable</strong> — just your group, a premium vehicle
-        and routes refined over 15 years on the trails.
+        and a flexible route planned around your day.
       </>,
     ],
   },

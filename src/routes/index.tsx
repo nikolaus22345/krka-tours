@@ -72,7 +72,7 @@ const features = [
   {
     icon: Award,
     title: "Tried & tested",
-    text: "Only routes our team has personally walked, driven and refined around Krka for 15 years.",
+    text: "Proven Krka routes with sensible timings, pick-up points and park tickets included where stated.",
   },
   {
     icon: Sparkles,
@@ -234,28 +234,26 @@ function HomePage() {
               className="rounded-[2rem] shadow-[var(--shadow-elevated)] w-full h-auto"
             />
             <div className="hidden sm:flex absolute -bottom-8 -right-4 lg:-right-8 bg-card border border-border rounded-2xl px-6 py-5 shadow-[var(--shadow-card)] items-center gap-4">
-              <div className="h-12 w-12 rounded-full bg-primary text-primary-foreground grid place-items-center font-display font-semibold">15+</div>
+              <div className="h-12 w-12 rounded-full bg-primary text-primary-foreground grid place-items-center font-display font-semibold text-sm">2016</div>
               <div>
-                <div className="text-sm font-semibold">Years guiding</div>
-                <div className="text-xs text-muted-foreground">Specialists for Krka</div>
+                <div className="text-sm font-semibold">Founded</div>
+                <div className="text-xs text-muted-foreground">Krka day tours</div>
               </div>
             </div>
           </div>
           <div className="lg:col-span-6 lg:pl-6">
             <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">About Krka Tours</p>
             <h2 className="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight">
-              A small team. A serious obsession with Krka.
+              Krka National Park tours, booked simply.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-              We started in 2009 as three friends with a battered estate car and a shared frustration:
-              every Krka tour felt rushed, generic and oversold. So we built the alternative —
-              small groups, premium vehicles, locally owned, with itineraries refined over more than a
-              decade on the trails.
+              A locally owned Croatian team running day tours and private transfers to Krka
+              National Park from Split, Dubrovnik, Zadar, Trogir and Šibenik — with hotel pick-up,
+              clear pricing and personal support from first enquiry to drop-off.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Today our team of Croatian guides runs private Krka day trips, national park
-              journeys and one-way transfers along the Dalmatian coast. Every booking is handled
-              personally — never resold to a third party.
+              Choose a small-group departure or a private tour tailored to your dates and pace.
+              Every booking is handled directly by our team — no third-party reselling.
             </p>
             <Button asChild variant="hero" size="lg" className="mt-8">
               <Link to="/about">More about us <ArrowRight className="h-4 w-4" /></Link>

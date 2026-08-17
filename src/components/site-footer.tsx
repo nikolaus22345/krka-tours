@@ -13,8 +13,7 @@ export function SiteFooter() {
             <BrandWordmark className="text-lg text-white" />
           </div>
           <p className="mt-5 text-sm text-white/70 leading-relaxed max-w-xs">
-            Krka National Park tours and transfers across Dalmatia. Locally owned.
-            15+ years guiding the waterfalls.
+            Krka National Park tours and transfers across Dalmatia. Locally owned since 2016.
           </p>
           <div className="mt-6 flex gap-3">
             <a href="#" className="h-9 w-9 grid place-items-center rounded-full bg-white/10 hover:bg-primary transition-colors"><Instagram className="h-4 w-4" /></a>

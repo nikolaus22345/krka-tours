@@ -13,9 +13,9 @@ export const Route = createFileRoute("/about")({
     return {
       meta: [
         { title: "About — Krka Tours" },
-        { name: "description", content: "Locally owned Krka specialists since 2009. A small team of Croatian guides running Krka National Park tours and transfers across Dalmatia." },
+        { name: "description", content: "Locally owned Krka National Park tours and private transfers across Dalmatia. A Croatian team running day trips since 2016." },
         { property: "og:title", content: "About Krka Tours" },
-        { property: "og:description", content: "Locally owned Krka specialists since 2009." },
+        { property: "og:description", content: "Krka National Park day tours and transfers — locally owned since 2016." },
         ...canonical.meta,
       ],
       links: canonical.links,
@@ -34,12 +34,12 @@ function AboutPage() {
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">About us</p>
             <h1 className="mt-3 font-display text-4xl sm:text-6xl font-semibold leading-tight">
-              A small team of Croatian guides, specialists for Krka since 2009.
+              A Croatian team for Krka National Park tours, founded in 2016.
             </h1>
             <p className="mt-5 text-muted-foreground text-lg">
-              Three friends, a battered estate car, and the conviction that Krka National Park tours
-              didn&apos;t have to feel rushed or generic. Fifteen years later we&apos;re still locally owned,
-              still running every booking ourselves.
+              We organise day tours and private transfers to Krka from Split, Dubrovnik, Zadar,
+              Trogir and Šibenik. Small groups, premium vehicles and clear pricing — every booking
+              handled by our team from enquiry to drop-off.
             </p>
           </div>
           <img
@@ -64,17 +64,17 @@ function AboutPage() {
         />
         <div>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold leading-tight">
-            What &quot;locally owned&quot; actually means
+            What we offer
           </h2>
           <p className="mt-5 text-muted-foreground leading-relaxed text-lg">
-            Every guide on our roster is Croatian and has personally walked the Krka trails
-            in every season. We don&apos;t resell to third parties, we don&apos;t pad the group, and
-            we don&apos;t rush you past Skradinski buk for a coach schedule.
+            Certified local guides, comfortable Mercedes vehicles and flexible itineraries for
+            Krka National Park. We keep groups small, include park entrance where stated, and
+            adjust the pace to your interests.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Our fleet is a small set of Mercedes V-Class and E-Class vehicles, maintained carefully
-            and replaced on a strict schedule. Hotels we partner with near the park and on multi-day
-            routes are family run wherever possible.
+            Day tours, private trips and one-way transfers are all booked directly with us — no
+            third-party reselling. Hotel pick-up, clear quotes and support by phone, email or
+            WhatsApp throughout your trip.
           </p>
         </div>
       </section>
@@ -82,14 +82,14 @@ function AboutPage() {
       <section className="bg-primary text-primary-foreground py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl sm:text-5xl font-semibold leading-tight max-w-2xl text-primary-foreground">
-            Numbers we&apos;re quietly proud of
+            Why travellers book with us
           </h2>
           <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Award, n: "15+", l: "Years guiding Krka" },
-              { icon: Users, n: "12,000+", l: "Happy travellers" },
-              { icon: MapPin, n: "4", l: "Countries covered" },
-              { icon: Leaf, n: "100%", l: "Locally owned" },
+              { icon: Award, n: "2016", l: "Founded" },
+              { icon: Users, n: "Small", l: "Group sizes" },
+              { icon: MapPin, n: "5", l: "Departure cities" },
+              { icon: Leaf, n: "100%", l: "Direct booking" },
             ].map((s) => (
               <div key={s.l} className="rounded-2xl bg-white/10 backdrop-blur border border-white/15 p-7">
                 <s.icon className="h-6 w-6" />

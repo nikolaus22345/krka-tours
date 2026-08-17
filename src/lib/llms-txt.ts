@@ -20,7 +20,7 @@ export function buildLlmsTxt(): string {
 
   return `# Krka Tours
 
-> Locally owned Krka National Park day tours and private transfers from Split, Dubrovnik, Zadar, Trogir and Šibenik.
+> Locally owned Krka National Park day tours and private transfers from Split, Dubrovnik, Zadar, Trogir and Šibenik. Operating since 2016.
 
 Krka Tours offers guided small-group day trips to Krka National Park with hotel pick-up, park entrance and scenic boat rides. Custom private tours and Mercedes transfers are also available across Dalmatia and neighbouring countries.
 

@@ -204,7 +204,7 @@ export const multidayTours: Tour[] = [
       "Everything arranged: accommodation, transfers, restaurant tips and local guides. Just show up and explore.",
     overview: [
       "Six to seven days from Zagreb to Dubrovnik, covering Plitvice Lakes, Krka National Park and the finest stops along the Adriatic highway.",
-      "Boutique 4★ hotels, a single driver-guide, and itineraries refined over fifteen years on the road.",
+      "Boutique 4★ hotels, a single driver-guide, and well-paced itineraries across Croatia.",
       "The signature multi-day journey from Krka Tours.",
     ],
     destinations: ["Plitvice", "Zadar", "Krka", "Šibenik", "Split", "Dubrovnik"],
