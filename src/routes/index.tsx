@@ -244,16 +244,16 @@ function HomePage() {
           <div className="lg:col-span-6 lg:pl-6">
             <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">About Krka Tours</p>
             <h2 className="mt-3 font-display text-3xl sm:text-5xl font-semibold leading-tight">
-              Krka National Park tours, booked simply.
+              Krka tours from Dalmatia — simple and direct.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed text-lg">
-              A locally owned Croatian team running day tours and private transfers to Krka
-              National Park from Split, Dubrovnik, Zadar, Trogir and Šibenik — with hotel pick-up,
-              clear pricing and personal support from first enquiry to drop-off.
+              Since 2016 we&apos;ve run day tours and private transfers to Krka National Park from
+              Split, Dubrovnik, Zadar, Trogir and Šibenik — with hotel pick-up, clear pricing and
+              personal support from first enquiry to drop-off.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Choose a small-group departure or a private tour tailored to your dates and pace.
-              Every booking is handled directly by our team — no third-party reselling.
+              Pick a small-group departure or a private tour on your dates. Every booking stays with
+              our team — no third-party reselling.
             </p>
             <Button asChild variant="hero" size="lg" className="mt-8">
               <Link to="/about">More about us <ArrowRight className="h-4 w-4" /></Link>
