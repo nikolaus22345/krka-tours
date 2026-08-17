@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { ContactInquiryForm } from "@/components/contact-inquiry-form";
 import { Button } from "@/components/ui/button";
 import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site-contact";
 import { ArrowRight, CheckCircle2, Plane, Car, Clock } from "lucide-react";
@@ -106,6 +107,22 @@ function TransfersPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* INQUIRY */}
+      <section className="bg-cream py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">Get a quote</p>
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl font-semibold leading-tight">
+              Request a transfer
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Pickup, destination, date and guests — we reply within 12 hours.
+            </p>
+          </div>
+          <ContactInquiryForm defaultTour="Private transfer" source="Transfers page" />
         </div>
       </section>
 
