@@ -1,0 +1,22 @@
+{
+  "name": "Krka Tours",
+  "short_name": "Krka Tours",
+  "description": "Krka National Park tours and transfers across Croatia — from Split, Dubrovnik, Zadar, Trogir and Šibenik.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#367c2b",
+  "background_color": "#F7F7F4",
+  "display": "standalone"
+}

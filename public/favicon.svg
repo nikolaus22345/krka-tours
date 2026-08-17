@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Krka Tours">
+  <defs>
+    <pattern id="pt-checker" x="14" y="9" width="20" height="28" patternUnits="userSpaceOnUse">
+      <rect width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="4" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="8" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="12" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="16" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect y="5.6" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="4" y="5.6" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="8" y="5.6" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="12" y="5.6" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="16" y="5.6" width="4" height="5.6" fill="#C8102E"/>
+      <rect y="11.2" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="4" y="11.2" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="8" y="11.2" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="12" y="11.2" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="16" y="11.2" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect y="16.8" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="4" y="16.8" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="8" y="16.8" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="12" y="16.8" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="16" y="16.8" width="4" height="5.6" fill="#C8102E"/>
+      <rect y="22.4" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="4" y="22.4" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="8" y="22.4" width="4" height="5.6" fill="#FFFFFF"/>
+      <rect x="12" y="22.4" width="4" height="5.6" fill="#C8102E"/>
+      <rect x="16" y="22.4" width="4" height="5.6" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+  <rect width="48" height="48" rx="11" fill="#FFFFFF" stroke="#367c2b" stroke-width="2"/>
+  <path d="M24 9 L34 13 V21 C34 28 30 34 24 37 C18 34 14 28 14 21 V13 Z" fill="url(#pt-checker)"/>
+  <path d="M24 9 L34 13 V21 C34 28 30 34 24 37 C18 34 14 28 14 21 V13 Z" fill="none" stroke="#C8102E" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M24 35.5 Q31 38.5 40 40" stroke="#367c2b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <circle cx="40" cy="40" r="2.2" fill="#367c2b"/>
+  <circle cx="24" cy="35.5" r="2" fill="#367c2b" stroke="#FFFFFF" stroke-width="1.2"/>
+</svg>
