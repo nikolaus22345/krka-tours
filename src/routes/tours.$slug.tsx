@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { tourBySlug, tours, type Tour } from "@/lib/tours";
 import { TourPricingTable } from "@/components/tour-pricing-table";
 import { TourPricingTiersTable } from "@/components/tour-pricing-tiers-table";
+import { ContactInquiryForm } from "@/components/contact-inquiry-form";
 import { Button } from "@/components/ui/button";
 import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from "@/lib/site-contact";
 import {
@@ -253,6 +254,25 @@ function TourPage() {
             </div>
           </div>
         </aside>
+      </section>
+
+      {/* INQUIRY */}
+      <section className="bg-cream py-16 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">Book this tour</p>
+            <h2 className="mt-3 font-display text-3xl sm:text-4xl font-semibold leading-tight">
+              Request availability
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              We reply within 12 hours — usually much faster.
+            </p>
+          </div>
+          <ContactInquiryForm
+            defaultTour={tour.title}
+            source={`Tour page — ${tour.shortTitle}`}
+          />
+        </div>
       </section>
 
       {/* RELATED */}
