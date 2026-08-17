@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { pageSeoHead } from "../lib/site-seo";
 
 function NotFoundComponent() {
   return (
@@ -73,7 +74,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  head: () => {
+    const seo = pageSeoHead("/");
+    return {
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -84,10 +87,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Krka Tours — Krka National Park Tour" },
       { property: "og:description", content: "Guided tours of Krka National Park and transfers across Dalmatia." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Krka Tours" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#367c2b" },
+      ...seo.meta,
     ],
     links: [
+      ...seo.links,
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "icon", href: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
@@ -112,7 +118,8 @@ gtag('js', new Date());
 gtag('config', 'G-7JN7J9KVKZ');`,
       },
     ],
-  }),
+  };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

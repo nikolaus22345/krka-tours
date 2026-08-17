@@ -1,10 +1,9 @@
 import { useState, type FormEvent } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { sendInquiry } from "@/lib/send-inquiry-fn";
+import { sendInquiryViaFormSubmit } from "@/lib/send-inquiry-client";
 import { SITE_EMAIL, SITE_PHONE_DISPLAY } from "@/lib/site-contact";
 
 type Props = {
@@ -13,7 +12,6 @@ type Props = {
 };
 
 export function ContactInquiryForm({ defaultTour = "", source = "Contact page" }: Props) {
-  const sendInquiryFn = useServerFn(sendInquiry);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -24,20 +22,24 @@ export function ContactInquiryForm({ defaultTour = "", source = "Contact page" }
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const website = String(formData.get("website") ?? "");
+
+    if (website) {
+      setStatus("success");
+      form.reset();
+      return;
+    }
 
     try {
-      await sendInquiryFn({
-        data: {
-          name: String(formData.get("name") ?? ""),
-          email: String(formData.get("email") ?? ""),
-          tour: String(formData.get("tour") ?? "") || undefined,
-          date: String(formData.get("date") ?? "") || undefined,
-          guests: formData.get("guests") ? Number(formData.get("guests")) : undefined,
-          hotel: String(formData.get("hotel") ?? "") || undefined,
-          message: String(formData.get("message") ?? "") || undefined,
-          source,
-          website: String(formData.get("website") ?? ""),
-        },
+      await sendInquiryViaFormSubmit({
+        name: String(formData.get("name") ?? ""),
+        email: String(formData.get("email") ?? ""),
+        tour: String(formData.get("tour") ?? "") || undefined,
+        date: String(formData.get("date") ?? "") || undefined,
+        guests: formData.get("guests") ? Number(formData.get("guests")) : undefined,
+        hotel: String(formData.get("hotel") ?? "") || undefined,
+        message: String(formData.get("message") ?? "") || undefined,
+        source,
       });
 
       setStatus("success");
@@ -45,11 +47,7 @@ export function ContactInquiryForm({ defaultTour = "", source = "Contact page" }
     } catch (error) {
       setStatus("error");
       const message = error instanceof Error ? error.message : "";
-      setErrorMessage(
-        message.includes("EmailJS is not configured")
-          ? `The form is not fully configured yet. Please email ${SITE_EMAIL} or call ${SITE_PHONE_DISPLAY}.`
-          : message || "Something went wrong. Please try again or contact us by phone.",
-      );
+      setErrorMessage(message || `Something went wrong. Please email ${SITE_EMAIL} or call ${SITE_PHONE_DISPLAY}.`);
     }
   }
 
